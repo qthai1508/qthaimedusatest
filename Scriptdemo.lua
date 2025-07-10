@@ -2,21 +2,6 @@ repeat task.wait() until game:IsLoaded()
 task.wait(1)
 local TweenService = game:GetService("TweenService")
 
--- 🌈 Viền bảy màu
-local uiStroke = Instance.new("UIStroke", frame)
-uiStroke.Thickness = 2
-uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-task.spawn(function()
-	while true do
-		for h = 0, 1, 0.01 do
-			uiStroke.Color = Color3.fromHSV(h, 1, 1)
-			task.wait()
-		end
-	end
-end)
-
-Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
-
 -- SERVICES
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
@@ -25,7 +10,35 @@ local Rep = game:GetService("ReplicatedStorage")
 local VIM = game:GetService("VirtualInputManager")
 local WS = game:GetService("Workspace")
 
+-- 🎨 Mảng màu 7 sắc cầu vồng
+local colors = {
+    Color3.fromRGB(255, 0, 0),      -- Đỏ
+    Color3.fromRGB(255, 127, 0),    -- Cam
+    Color3.fromRGB(255, 255, 0),    -- Vàng
+    Color3.fromRGB(0, 255, 0),      -- Lục
+    Color3.fromRGB(0, 255, 255),    -- Lam nhạt
+    Color3.fromRGB(0, 0, 255),      -- Lam
+    Color3.fromRGB(139, 0, 255)     -- Tím
+}
 
+-- 🖼️ Frame bạn muốn thêm viền
+local frame = YourFrame -- thay bằng biến frame bạn muốn (VD: `main`, `window`...)
+
+-- 🖌️ Tạo UIStroke viền
+local stroke = Instance.new("UIStroke")
+stroke.Thickness = 2
+stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+stroke.Parent = frame
+
+-- 🌈 Vòng lặp chuyển màu liên tục
+task.spawn(function()
+    local index = 1
+    while true do
+        stroke.Color = colors[index]
+        index = index % #colors + 1 -- quay vòng lại
+        task.wait(0.2) -- thời gian chớp
+    end
+end)
 -- Load Fluent UI
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/LongThanhTz12/GUI-LIBARY-SCRIPT/refs/heads/main/guilibaryscript"))()
 
