@@ -2,6 +2,21 @@ repeat task.wait() until game:IsLoaded()
 task.wait(1)
 local TweenService = game:GetService("TweenService")
 
+-- 🌈 Viền bảy màu
+local uiStroke = Instance.new("UIStroke", frame)
+uiStroke.Thickness = 2
+uiStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+task.spawn(function()
+	while true do
+		for h = 0, 1, 0.01 do
+			uiStroke.Color = Color3.fromHSV(h, 1, 1)
+			task.wait()
+		end
+	end
+end)
+
+Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
+
 -- SERVICES
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
