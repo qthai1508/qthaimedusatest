@@ -41,7 +41,7 @@ Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
 
 -- 🏷 Tiêu đề
 local title = Instance.new("TextLabel", frame)
-title.Text = "👻 Medus PVP 👻"
+title.Text = "👻 Medusa PVP 👻"
 title.Position = UDim2.new(0, 0, 0, 5)
 title.Size = UDim2.new(1, 0, 0, 35)
 title.BackgroundTransparency = 1
