@@ -41,7 +41,7 @@ Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 12)
 
 -- 🏷 Tiêu đề
 local title = Instance.new("TextLabel", frame)
-title.Text = "👻 Medusa 👻"
+title.Text = "👻 Medus PVP 👻"
 title.Position = UDim2.new(0, 0, 0, 5)
 title.Size = UDim2.new(1, 0, 0, 35)
 title.BackgroundTransparency = 1
@@ -212,7 +212,7 @@ local autoAttackBtn = createButton("🗡️ Tự đánh khi cầm vũ khí")
 autoAttackBtn.Parent = buttonContainer
 autoAttackBtn.MouseButton1Click:Connect(function()
 	attacking = not attacking
-	autoAttackBtn.Text = attacking and "Medusa 👻 " or "Tự đánh khi cầm vũ khí"
+	autoAttackBtn.Text = attacking and "Medusa Hit 👻 " or "Tự đánh khi cầm vũ khí"
 end)
 
 local ToggleBossAttack = createButton("🔁 Xoay quanh Player")
