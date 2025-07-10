@@ -4,7 +4,6 @@ local TweenService = game:GetService("TweenService")
 
 -- ✅ Key thật và link
 local trueKey = "medusazz"
-
 -- 📦 GUI
 local gui = Instance.new("ScreenGui")
 gui.Name = "GetKeyUI"
@@ -112,25 +111,33 @@ task.delay(3, function()
 	closeBtn.Visible = true
 end)
 
--- 💬 Check Key
+-- 🗝️ Check Key
 checkBtn.MouseButton1Click:Connect(function()
-	if input.Text == trueKey then
-		warnLabel.Text = "✅ Key Chính Xác!"
-		task.wait(0.5)
-		TweenService:Create(main, TweenInfo.new(0.4), {Size = UDim2.new(0, 0, 0, 0)}):Play()
-		TweenService:Create(blur, TweenInfo.new(0.4), {BackgroundTransparency = 1}):Play()
-		task.wait(0.4)
-		gui:Destroy()
+    if input.Text == trueKey then
+        warnLabel.Text = "✅ Key Chính Xác!"
+        warnLabel.TextColor3 = Color3.fromRGB(0, 255, 0)
+        
+        task.wait(0.5)
 
-		local success, err = pcall(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/newbie0z-lol/bri-/refs/heads/main/Protected_8888589279991485.lua"))()
-		end)
-		if not success then
-			game.Players.LocalPlayer:Kick("Lỗi tải script, hãy liên hệ Admin.")
-		end
-	else
-		warnLabel.Text = "❌ Sai Key rồi bro ơi!"
-	end
+        -- Thu nhỏ GUI + làm mờ nền
+        TweenService:Create(main, TweenInfo.new(0.4), {Size = UDim2.new(0, 0, 0, 0)}):Play()
+        TweenService:Create(blur, TweenInfo.new(0.4), {BackgroundTransparency = 1}):Play()
+
+        task.wait(0.4)
+        gui:Destroy()
+
+        -- Tải script tool
+        local success, err = pcall(function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/qthai1508/qthaimedusatest/refs/heads/main/Scriptdemo.lua"))()
+        end)
+
+        if not success then
+            game.Players.LocalPlayer:Kick("Lỗi tải script, hãy liên hệ Admin.")
+        end
+    else
+        warnLabel.Text = "❌ Sai Key rồi bro ơi!"
+        warnLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+    end
 end)
 
 -- ❌ Đóng
