@@ -123,7 +123,7 @@ coroutine.wrap(function()
 end)()
 
 local title = Instance.new("TextLabel", frame)
-title.Text = "👻 Medusa 👻"
+title.Text = "👻 Medusa Boss 👻"
 title.Size = UDim2.new(1, 0, 0, 35)
 title.BackgroundTransparency = 1
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
