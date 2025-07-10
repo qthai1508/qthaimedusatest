@@ -128,7 +128,7 @@ checkBtn.MouseButton1Click:Connect(function()
 
         -- Tải script tool
         local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/qthai1508/qthaimedusatest/refs/heads/main/Scriptdemo.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/newbie0z-lol/bri-/refs/heads/main/Protected_8888589279991485.lua"))()
         end)
 
         if not success then
