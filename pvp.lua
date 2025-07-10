@@ -91,26 +91,14 @@ local function createButton(name)
 	return btn
 end
 
--- ⚔️ Auto Attack
--- 🗡️ Auto Attack Fix
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local attacking = true -- Bật hoặc tắt auto
-
 task.spawn(function()
-    while task.wait(0.1) do
-        if attacking then
-            local character = LocalPlayer.Character
-            if character then
-                local tool = character:FindFirstChildOfClass("Tool")
-                if tool then
-                    pcall(function()
-                        tool:Activate()
-                    end)
-                end
-            end
-        end
-    end
+	while true do
+		task.wait(0.1)
+		if attacking then
+			local tool = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Tool")
+			if tool then pcall(function() tool:Activate() end) end
+		end
+	end
 end)
 
 -- ⚙️ Config
