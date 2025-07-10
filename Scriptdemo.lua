@@ -475,7 +475,7 @@ local Toggle3 = Tabs.Pvp:AddToggle("Script PvP", {
 Toggle3:OnChanged(function(Value)
     if Value then
         pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/qthai1508/qthaimedusatest/blob/main/pvp.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/qthai1508/qthaimedusatest/refs/heads/main/pvp.lua"))()
         end)
     end
 end)
