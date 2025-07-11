@@ -19,7 +19,7 @@
 
 ### 📊 Most Used Languages
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=WuThanhDieu&layout=compact&theme=tokyonight)](https://github.com/qthai1508)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=qthai1508&layout=compact&theme=tokyonight)](https://github.com/qthai1508)
 
 ---
 
