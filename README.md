@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[https://i.imgur.com/YOUR_IMAGE.png](https://camo.githubusercontent.com/a8aca94558ab38ed024d56854122770b82972de472cea5fd80816e73c6140867/68747470733a2f2f692e696d6775722e636f6d2f493554305a696e2e6a706567)" width="600"/>
+  <img src="https://i.ibb.co/ns3MG6bp/68747470733a2f2f692e696d6775722e636f6d2f493554305a696e2e6a706567.jpg" width="600"/>
 </p>
 
 <h3 align="center">Hi, I'm <strong>QuocThai</strong></h3>
