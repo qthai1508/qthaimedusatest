@@ -20,7 +20,7 @@ hNpYHtvn.BorderSizePixel = 0
 
 local FVHKHbkM = Instance.new("TextLabel", hNpYHtvn)
 FVHKHbkM.Size = UDim2.new(1, 0, 0, 30)
-FVHKHbkM.Text = "🔐 Nhập Key để mở GUI"
+FVHKHbkM.Text = "🔐Nhập Key Vô Đi Bé Oii🔐"
 FVHKHbkM.TextColor3 = Color3.new(1,1,1)
 FVHKHbkM.BackgroundTransparency = 1
 FVHKHbkM.Font = Enum.Font.GothamBold
@@ -198,7 +198,7 @@ FdeGtDaP:Destroy()
 ijrMwEvE.Parent = game.CoreGui
 ijrMwEvE.Enabled = true
 else
-FVHKHbkM.Text = "❌ Sai key! Vui lòng thử lại."
+FVHKHbkM.Text = "❌ Sai key! Cho bé thêm cơ hội đó."
 FVHKHbkM.TextColor3 = Color3.fromRGB(255, 80, 80)
 end
 end)
